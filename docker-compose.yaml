@@ -1,0 +1,17 @@
+version: '3.8'
+services:
+  app:
+    
+    image: python:3.12-slim
+    
+    container_name: aibot
+    
+    working_dir: /app
+    
+    volumes:
+      - ./:/app
+
+    env_file:
+      - .env
+
+    command: sh -c "pip install --no-cache-dir -r requirements.txt && exec python run.py"
