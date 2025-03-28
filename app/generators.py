@@ -6,9 +6,7 @@ from typing import Tuple
 
 load_dotenv()
 
-client = AsyncOpenAI(api_key=os.getenv('AI_TOKEN'),
-                     http_client=httpx.AsyncClient(proxy=os.getenv('PROXY'),
-                                                   transport=httpx.HTTPTransport(local_address='0.0.0.0')))
+client = AsyncOpenAI(api_key=os.getenv('AI_TOKEN'))
 
 
 async def ask_chatgpt(request: list[dict], model: str) -> Tuple[str | None, int]:

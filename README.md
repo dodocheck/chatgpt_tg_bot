@@ -11,7 +11,6 @@ git clone https://github.com/dodocheck/chatgpt_tg_bot.git
 ```.env
 TG_TOKEN=ваш_телеграм_токен
 AI_TOKEN=ваш_ai_токен
-PROXY=http://логин:пароль@IP:порт
 ```
 
 ### Запуск
